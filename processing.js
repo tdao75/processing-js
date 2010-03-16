@@ -2002,7 +2002,11 @@
       }
       return results.slice(0, i);
     };
-
+	String.prototype.strCharAt = function ( strIndex ) {
+	  if( strIndex > -1 && strIndex < this.length )
+        return this.charAt( strIndex );
+	};
+	
     String.prototype.replaceAll = function (re, replace) {
       return this.replace(new RegExp(re, "g"), replace);
     };
