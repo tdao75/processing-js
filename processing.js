@@ -1546,13 +1546,13 @@
       curElement.removeEventListener('contextmenu', contextMenu, false);
     };
 
-    p.createInput = function createInput(filename){
-      if ((input != null) && filename.toLowerCase().endsWith(".gz")) 
-         return new GZIPInputStream(input);
-      else if ( input == null ) 
-          return null;
-      else
-      return input;
+     p.createOutput = function createOutput(filename) {
+	   if (filename.getName().toLowerCase().endsWith(".gz")) 
+         return new GZIPOutputStream(fos); 
+	   else if (filename == null)
+        return null;
+       else
+        return new FileOutputStream(filename);
     };
 	
 		
