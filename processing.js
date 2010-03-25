@@ -1548,7 +1548,7 @@
 
      p.createOutput = function createOutput(filename) {
 	   if (filename.getName().toLowerCase().endsWith(".gz")) 
-         return new GZIPOutputStream(fos); 
+         return new GZIPOutputStream(filename); 
 	   else if (filename == null)
         return null;
        else
