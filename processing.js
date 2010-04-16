@@ -2986,7 +2986,10 @@
     p.enableContextMenu = function enableContextMenu() {
       curElement.removeEventListener('contextmenu', contextMenu, false);
     };
-
+    
+	function status(text) {
+	  self.status = text;
+	};
 
     ////////////////////////////////////////////////////////////////////////////
     // Binary Functions
