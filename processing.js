@@ -2988,8 +2988,8 @@
     };
     
 	function status(text) {
-	  self.status = text;
-	};
+	  window.status = text;
+	}
 	
     ////////////////////////////////////////////////////////////////////////////
     // Binary Functions
