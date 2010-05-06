@@ -3356,8 +3356,8 @@
     p.enableContextMenu = function enableContextMenu() {
       curElement.removeEventListener('contextmenu', contextMenu, false);
     };
-
-    function createInput(filename) {  
+    
+	function createInput(filename) {  
       if (window.XMLHttpRequest){
         var fileRequest = new XMLHttpRequest();  
         fileRequest.open('GET', filename, true);  
@@ -3369,6 +3369,7 @@
         }
       }
     }
+    
 	
     ////////////////////////////////////////////////////////////////////////////
     // Binary Functions
