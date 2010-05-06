@@ -3357,7 +3357,19 @@
       curElement.removeEventListener('contextmenu', contextMenu, false);
     };
 
-
+    function createInput(filename) {  
+      if (window.XMLHttpRequest){
+        var fileRequest = new XMLHttpRequest();  
+        fileRequest.open('GET', filename, true);  
+        fileRequest.send(null);  
+        if (fileRequest.status != 200) return null;  
+		else {
+	      var returnedfile = fileRequest.responseText;
+          return returnedfile;  
+        }
+      }
+    }
+	
     ////////////////////////////////////////////////////////////////////////////
     // Binary Functions
     ////////////////////////////////////////////////////////////////////////////
